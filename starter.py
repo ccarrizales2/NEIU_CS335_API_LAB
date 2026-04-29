@@ -37,7 +37,7 @@ def call_one_get():
     divider("CALL 1 — GET Pokemon Request")
 
     url = f"{BASE_URL}/pokemon/jirachi"
-    params = {}  # TODO: update these
+    params = {}
 
     response = requests.get(url, headers=HEADERS, params=params)
 
@@ -86,10 +86,8 @@ def call_two_post():
 def call_three_get(pokemon_name: str):
     divider(f"CALL 3 - User Search | input: '{pokemon_name}'")
 
-    # Use the variable 'pokemon_name' in the URL
     url = f"{BASE_URL}/pokemon/{pokemon_name.lower()}"
 
-    # Again, change this to requests.get
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
